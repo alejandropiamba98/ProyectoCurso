@@ -1,0 +1,21 @@
+<% include header%>
+
+
+
+
+    <form class="card-body" action="/news/update" method="post">
+        <h3 class="card-title">ACTUALIZAR DATOS DE LA EMPRESA </h3>
+        <div class="form-group">
+
+            <input name="id_news" value="<%=actualizar.id_news%>" type="hidden" class="form-control" placeholder="Nuevo Título">
+
+            <input name="title" value="<%=actualizar.title%>" type="text" class="form-control" placeholder="Nuevo Título">
+        </div>
+        <div class="form-group">
+            <input name="news" value="<%=actualizar.news%>" type="text" class="form-control" placeholder="Nuevo Contenido">
+        </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+
+
+    <% include footer%>

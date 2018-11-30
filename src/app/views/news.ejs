@@ -1,0 +1,62 @@
+<% include header %>
+
+        <table border="0" cellpadding="10" align="CENTER">
+                <THEAD>
+                    <tr>
+                    <tbody>
+                        <tr>
+                            
+                        <td>
+                                <form class="card-body" action="/news/add" method="post"> 
+                                    <h3 class="card-title">AGREGAR PRODUCTOS</h3>
+                                    <br>
+                                        <div class="form-group"> 
+                                    <input name="title" type="text" class="form-control" 
+                                    placeholder="NOMBRE"> 
+                                    </div> 
+                                    <div class="form-group"> 
+                                    <input name="news" type="text" class="form-control" 
+                                    placeholder="DESCRIPCIÓN"> 
+                                    </div> 
+                                    <center><input type="submit" class="btn btn-primary"></center> 
+                                    </form>
+                            
+                        </td>
+                </tr><tr>
+                        <td>
+                            
+                        </td>
+                    </tr>        
+                        </tr>
+                </THEAD>
+                </table>
+                <BR>
+<table class="table table-striped table-bordered" aling="center"> 
+<tr> 
+<th><center>ID</center></th> 
+<th><center>PRODUCTO</center></th> 
+<th><center>DESCRIPCIÓN</center></th> 
+<th><center>ACCIÓN</center></th>
+</tr> 
+<% for (var i = 0; i < news.length; i ++) { %> 
+<tr> 
+<td><CENTER><%= news[i].id_news %></CENTER></td> 
+<td><CENTER><%= news[i].title %></CENTER></td> 
+<td><CENTER><%= news[i].news %></CENTER></td> 
+<td><center>
+    <a href="/news/delete/<%= news[i].id_news %>"><img src="http://www.clker.com/cliparts/u/i/L/w/Y/B/x-move-iconx-move-icon-th.png" width="30" height="30" title="ELIMINAR"></a>
+    <a href="/news/redir/<%= news[i].id_news %>"><img src="http://www.felipeperucho.com/ensusitio/wp-content/uploads/view-refresh1.png" width="30" height="30" title="ACTUALIZAR"></a>
+</center></td>
+</tr> 
+
+<% } %> 
+</table> 
+</div> 
+</div>
+<% include footer %>
+
+<br>
+
+
+
+
